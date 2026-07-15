@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+faiss-cpu
+pypdf
+python-dotenv
+tiktoken
+sentence-transformers
+chromadb
+unstructured
+langchain-mistralai
+langchain-huggingface
