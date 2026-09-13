@@ -201,15 +201,74 @@ st.markdown(
             box-shadow: 0 10px 22px rgba(124, 58, 237, 0.35);
         }
 
-        /* ---------- Sidebar ---------- */
+        /* ---------- Persistent Navigation Sidebar ---------- */
         section[data-testid="stSidebar"] {
             background: #14132A;
+            min-width: 280px !important;
+            width: 280px !important;
+            transform: none !important;
+            visibility: visible !important;
+            display: block !important;
         }
+
+        section[data-testid="stSidebar"] > div {
+            width: 280px !important;
+        }
+
         section[data-testid="stSidebar"] * {
             color: #E5E3F5 !important;
         }
+
         section[data-testid="stSidebar"] .stRadio label {
             font-weight: 500;
+            display: flex !important;
+            align-items: center;
+            width: 100%;
+            padding: 0.45rem 0.35rem;
+            border-radius: 8px;
+        }
+
+        section[data-testid="stSidebar"] .stRadio label:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* Keep navigation visible instead of allowing the sidebar to collapse */
+        [data-testid="stSidebarCollapseButton"] {
+            display: none !important;
+        }
+
+        [data-testid="stSidebarNav"] {
+            display: block !important;
+        }
+
+        @media (min-width: 768px) {
+            section[data-testid="stSidebar"] {
+                position: fixed !important;
+                left: 0 !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                z-index: 999 !important;
+                overflow-y: auto !important;
+            }
+
+            .main .block-container {
+                margin-left: 280px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            section[data-testid="stSidebar"] {
+                min-width: 250px !important;
+                width: 250px !important;
+            }
+
+            section[data-testid="stSidebar"] > div {
+                width: 250px !important;
+            }
+
+            .main .block-container {
+                margin-left: 0 !important;
+            }
         }
 
         /* ---------- Chat bubbles ---------- */
@@ -344,7 +403,7 @@ with st.sidebar:
             "🧠 Model Information",
             "🛠️ Tech Stack",
             "ℹ️ About",
-        ],        
+        ],
         label_visibility="collapsed",
     )
 
