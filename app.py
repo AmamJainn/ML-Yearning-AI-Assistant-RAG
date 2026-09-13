@@ -347,7 +347,7 @@ with st.sidebar:
     ],
     index=1,
     label_visibility="collapsed",
-)
+    )
 
     st.markdown("---")
     st.markdown("### Retrieval Settings")
