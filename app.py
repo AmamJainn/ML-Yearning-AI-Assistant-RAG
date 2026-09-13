@@ -336,7 +336,7 @@ with st.sidebar:
     st.markdown("---")
 
    page = st.radio(
-    "Navigate",
+      "Navigate",
     [
         "🏠 Home",
         "💬 Ask the Assistant",
