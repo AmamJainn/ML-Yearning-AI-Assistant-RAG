@@ -335,19 +335,19 @@ with st.sidebar:
     st.markdown("Retrieval-Augmented Q&A over Andrew Ng's *Machine Learning Yearning*.")
     st.markdown("---")
 
-page = st.radio(
-    "Navigate",
-    [
-        "🏠 Home",
-        "💬 Ask the Assistant",
-        "⚙️ How It Works",
-        "🧠 Model Information",
-        "🛠️ Tech Stack",
-        "ℹ️ About",
-    ],
-    index=1,
-    label_visibility="collapsed",
-)
+    page = st.radio(
+        "Navigate",
+        [
+            "🏠 Home",
+            "💬 Ask the Assistant",
+            "⚙️ How It Works",
+            "🧠 Model Information",
+            "🛠️ Tech Stack",
+            "ℹ️ About",
+        ],
+        index=1,
+        label_visibility="collapsed",
+    )
 
     st.markdown("---")
     st.markdown("### Retrieval Settings")
