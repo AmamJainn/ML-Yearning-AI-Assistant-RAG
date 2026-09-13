@@ -344,8 +344,7 @@ with st.sidebar:
             "🧠 Model Information",
             "🛠️ Tech Stack",
             "ℹ️ About",
-        ],
-        index=1,
+        ],        
         label_visibility="collapsed",
     )
 
